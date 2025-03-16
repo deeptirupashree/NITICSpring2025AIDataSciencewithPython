@@ -14,6 +14,20 @@ def exercise_1():
     1. Create a list of squares of even numbers from 1 to 20
     """
     # TODO: Replace with your solution
+    square_list = []
+for i in range(1, 21):
+    square_list.append(i ** 2)
+
+print(square_list)
+
+#OR
+
+square_list = [i ** 2 for i in range(1, 21)]
+print(square_list)
+
+#Print square of all odd numbers between 1 to 20
+square_list = [i ** 2 for i in range(1, 21) if i % 2 == 1]
+print(square_list)
     pass
 
 def exercise_2():
@@ -21,6 +35,8 @@ def exercise_2():
     2. Create a list of tuples (number, square, cube) for numbers from 1 to 10
     """
     # TODO: Replace with your solution
+    cube_list = [(i, i ** 2, i ** 3) for i in range(1, 11)]
+ print(cube_list)
     pass
 
 def exercise_3(words):
@@ -32,6 +48,9 @@ def exercise_3(words):
         words: List of strings
     """
     # TODO: Replace with your solution
+    words = ['apple', 'banana', 'cherry', 'orange', 'blueberry']
+filtered_words = [word.upper() for word in words if len(word) > 5]
+print(filtered_words)
     pass
 
 def exercise_4(matrix):
@@ -52,6 +71,9 @@ def exercise_5(dictionary):
         dictionary: A dictionary with string keys and integer values
     """
     # TODO: Replace with your solution
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    flat_list = [num for row in matrix for num in row]
+    print(flat_list)
     pass
 
 # Part 2: Generators
